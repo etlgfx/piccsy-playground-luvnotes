@@ -109,7 +109,7 @@ $(function () {
 
 				if (data.success) {
 					sub.attr('value', 'Thank you!');
-					setTimeout(function() { $('.dialog-container').css('display', 'none'); sub.val('Add a luvnote'); }, 500);
+					setTimeout(function() { $('.dialog-container').css('display', 'none'); sub.val('Add a luvnote'); sub.removeAttr('disabled') }, 500);
 				}
 				else {
 					sub.attr('value', 'Try Again!');

@@ -12,13 +12,18 @@ if (empty($_POST['note']) || !isset($_SERVER['HTTP_X_REQUESTED_WITH']) || $_SERV
 	die();
 }
 
-$ses->send_email(
-	'info@piccsy.com',
-	array('ToAddresses' => array('eric+test@piccsy.com')),
+$result = $ses->send_email(
+	'Luvnotes <info+luvnotes@piccsy.com>',
+	array('ToAddresses' => array('info+luvnotes@piccsy.com')),
 	array(
 		'Subject' => array('Data' => 'luvnotes'),
 		'Body' => array('Text' => array('Data' => $_POST['note'])),
 	)
 );
 
-echo json_encode(array('success' => true));
+if (!$result->isOK()) {
+	echo $result->body->to_json();
+}
+else {
+	echo json_encode(array('success' => true));
+}
