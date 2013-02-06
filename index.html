@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>LuvNotes - Piccsy Playground</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=192271934223559";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<aside class="share-page">
+			<a href="#" id="share-page-link"><span class="social-icon social-share"></span>Share</a>
+
+			<div class="dialog-container dialog-left">
+				<div class="dialog">
+					<span>
+						<div class="fb-like" data-href="http://experiments.etlgfx.com/playground/luvnotes/" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+					</span>
+
+					<span>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="ilovepiccsy" data-url="http://experiments.etlgfx.com/playground/luvnotes/">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</span>
+
+					<span>
+						<!-- Place this tag where you want the su badge to render -->
+						<su:badge layout="2" location="http://experiments.etlgfx.com/playground/luvnotes/"></su:badge>
+					</span>
+				</div>
+			</div>
+		</aside>
+
+		<article>
+			<div class="next"><a href="#" id="next"><img src="gfx/arrowicon.svg" /></a></div>
+			<ul>
+				<li id="q1">You're in my inappropriate thoughts.</li>
+				<li id="q2">I still remember the first day I met you.</li>
+				<li id="q3">I love being loved by you.</li>
+				<li id="q4">The spaces between your fingers are meant to be filled with mine.</li>
+				<li id="q5">I hope your day is as radiant as your smile.</li>
+				<li id="q6">Every morning I wake up happy because I know I'll see you.</li>
+				<li id="q7">It's not my fault that I fell for you, you tripped me!</li>
+				<li id="q8">Falling in love with you was the easiest thing I've done in my life.</li>
+				<li id="q9">I could search my whole life through and through and never find another you.</li>
+				<li id="q10">I'll love you until the day after forever.</li>
+
+				<li id="q11">Let's commit the perfect crime, I'll steal your heart, and you steal mine.</li>
+				<li id="q12">Love was just a word until you gave it meaning.</li>
+				<li id="q13">I'll love you until the day after forever.</li>
+				<li id="q14">I want to be your favorite hello and your hardest goodbye.</li>
+				<li id="q15">I'd rather spend one moment holding you than a lifetime knowing I never could.</li>
+				<li id="q16">Without you I am nothing; with you I am everything.</li>
+				<li id="q17">If I could change the alphabet, I would put U and I together.</li>
+				<li id="q18">You are the love of my life.</li>
+				<li id="q19">Grow old with me, the best is yet to come.</li>
+				<li id="q20">I can't think of anything but you.</li>
+
+				<li id="q21">I wanted to send you all my love, but the postman said it was too big.</li>
+				<li id="q22">I'll love you till the end. And then some.</li>
+				<li id="q23">The world is more beautiful with you around.</li>
+				<li id="q24">Wherever you're going, I'm going your way.</li>
+				<li id="q25">You are my friend, my love, my forever Valentine.</li>
+				<li id="q26">For today or tomorrow, be mine, forever and ever and ever.</li>
+				<li id="q27">Loving you is the best thing that ever happened to me.</li>
+				<li id="q28">I love my life because it gave me you. I love you because you are my life.</li>
+				<li id="q29">Asking when I'll stop loving you is like asking when my heart will stop beating.</li>
+				<li id="q30">Four beautiful words I say everyday, I belong to you.</li>
+
+				<li id="q31">The small things you do make my heart will with joy.</li>
+				<li id="q32">You are my first thought when I wake up, you are my last though when I fall asleep.</li>
+				<li id="q33">Be mine. Forever.</li>
+			</ul>
+
+			<aside class="share-quote">
+				<a id="share-tw" href="#" target="_blank"><span class="social-icon social-tw"></span></a>
+				<a id="share-fb" href="#" target="_blank"><span class="social-icon social-fb"></span></a>
+				<div class="share">Share with a special someone</div>
+			</aside>
+		</article>
+
+		<aside class="submit">
+			<div class="dialog-container">
+				<div class="dialog">
+					<form id="form" method="POST" action="mail.php">
+						<fieldset>
+							<textarea name="note">Falling in love with you was the easiest thing I've done in my life.</textarea>
+						</fieldset>
+						<fieldset class="submit">
+							<input name="submit" type="submit" value="Add a luvnote">
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div><a href="#" id="submit">Submit a note</a></div>
+			<img src="gfx/hearticon.svg" />
+		</aside>
+
+		<div id="hearts"></div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+		<!-- Place this snippet wherever appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+			li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+		  })();
+		</script>
+	</body>
+</html>
