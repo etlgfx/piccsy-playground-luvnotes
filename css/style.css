@@ -104,49 +104,65 @@ article div.next {
 
 	position: relative;
 	top: 36px;
-	left: -1%;
+	left: 0;
 
-	-moz-transition: left 0.3s;
-	-webkit-transition: left 0.3s;
-	transition: left 0.3s;
 }
 
 article div.next img {
-	padding: 20px;
-	/*
-	max-width: 4vmin;
-	*/
+	position: relative;
+	top: 0;
+	left: -10px;
+
+	-moz-transition: left 0.2s;
+	-webkit-transition: left 0.2s;
+	transition: left 0.2s;
 }
 
-div.next:hover {
-	left: 0;
+article div.next img.float {
+	left: 0px;
 }
 
-span.social-icon {
+.share-quote a {
+	position: relative;
+	top: 0; left: 0;
 	display: inline-block;
+	margin: 0 0.5em;
 	width: 26px;
 	height: 26px;
-	margin: 0 5px;
-	background: url(../gfx/socialicons.svg);
-	vertical-align: middle;
 }
 
-span.social-fb {
-	background-position: -26px 0px;
+.share-quote a img {
+	position: absolute;
+	top: 0; left: 0;
+
+	-moz-transition: -moz-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
 }
 
-span.social-tw {
-	background-position: 0px 0px;
+.share-quote a img:hover {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 aside.share-page {
 	position: relative;
 	top: 0;
 	left: 0;
+	display: inline-block;
+	width: 400px;
 }
 
 span.social-share {
 	background: url(../gfx/share.png);
+}
+span.social-icon {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin: 0 5px;
+	vertical-align: middle;
 }
 
 .dialog-container {
@@ -165,12 +181,20 @@ span.social-share {
 	width: auto;
 }
 
+aside.share-page:hover .dialog-left {
+	display: block;
+}
+
+.dialog-left:hover {
+	display: block;
+}
+
 .dialog {
 	display: inline-block;
-	border-radius: 15px;
+	border-radius: 9px;
 	background: #fff;
 	color: #da2323;
-	box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
 	padding: 25px;
 }
 
@@ -201,11 +225,10 @@ aside.submit {
 
 aside.submit img {
 	display: inline-block;
-	margin-top: 20px;
 }
 
 input[type='submit'] {
-	border-radius: 8px;
+	border-radius: 7px;
 	border: none;
 	background: #da2323;
 	color: #fff;
@@ -228,4 +251,32 @@ li:target {
 	height: 16px;
 	background: url(../gfx/float.png) transparent;
 	position: absolute;
+}
+
+div.heart {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 56px;
+	height: 56px;
+	margin-top: 20px;
+}
+
+div.heart img {
+	-moz-transition: -moz-transform 0.1s;
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+}
+
+div.heart img.beat {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#submit:hover img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	transform: scale(1.1);
 }
