@@ -65,6 +65,7 @@ html, body {
 a {
 	color: #fff;
 	text-decoration: none;
+	outline: 0;
 }
 
 html {
