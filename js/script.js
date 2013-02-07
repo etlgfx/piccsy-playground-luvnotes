@@ -163,7 +163,7 @@
 			var re = /#q(\d+)/;
 			var match = window.location.hash.match(re);
 
-			loadQuote(null, match[1]);
+			loadQuote(null, match ? match[1] : null);
 
 			$(document).click(floatHearts);
 
