@@ -15,25 +15,13 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<aside class="share-page">
-			<a href="#" id="share-page-link"><span class="social-icon social-share"></span>Share</a>
+			<div class="fb-like" data-href="http://piccsy.com/luvnotes/" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
 
-			<div class="dialog-container dialog-left">
-				<div class="dialog">
-					<span>
-						<div class="fb-like" data-href="http://piccsy.com/luvnotes/" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
-					</span>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="ilovepiccsy" data-url="http://piccsy.com/luvnotes/">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-					<span>
-						<a href="https://twitter.com/share" class="twitter-share-button" data-via="ilovepiccsy" data-url="http://piccsy.com/luvnotes/">Tweet</a>
-						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-					</span>
-
-					<span>
-						<!-- Place this tag where you want the su badge to render -->
-						<su:badge layout="2" location="http://piccsy.com/luvnotes/"></su:badge>
-					</span>
-				</div>
-			</div>
+			<!-- Place this tag where you want the su badge to render -->
+			<su:badge layout="2" location="http://piccsy.com/luvnotes/"></su:badge>
 		</aside>
 
 		<article>
@@ -94,7 +82,7 @@
 				<li id="q49">I always feel better when I'm with you.</li>
 				<li id="q50">I need to be picked up, because I've fallen for you.</li>
 
-				<li id="q51">I love you this much spreads arms as wide as possible.</li>
+				<li id="q51">I love you this much *spreads arms as wide as possible*</li>
 				<li id="q52">You're #1! You're #1! You're #1!</li>
 			</ul>
 
@@ -105,18 +93,6 @@
 		</article>
 
 		<aside class="submit">
-			<div class="dialog-container">
-				<div class="dialog">
-					<form id="form" method="POST" action="mail.php">
-						<fieldset>
-							<textarea name="note">Falling in love with you was the easiest thing I've done in my life.</textarea>
-						</fieldset>
-						<fieldset class="submit">
-							<input name="submit" type="submit" value="Add a luvnote">
-						</fieldset>
-					</form>
-				</div>
-			</div>
 			<a href="#" id="submit">
 				<p>Submit a note</p>
 				<div class="heart">
@@ -124,6 +100,19 @@
 				</div>
 			</a>
 		</aside>
+
+		<div class="dialog-container">
+			<div class="dialog">
+				<form id="form" method="POST" action="mail.php">
+					<fieldset>
+						<textarea name="note">Falling in love with you was the easiest thing I've done in my life.</textarea>
+					</fieldset>
+					<fieldset class="submit">
+						<input name="submit" type="submit" value="Add a luvnote">
+					</fieldset>
+				</form>
+			</div>
+		</div>
 
 		<div id="hearts"></div>
 

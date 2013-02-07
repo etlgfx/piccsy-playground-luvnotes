@@ -4,12 +4,13 @@
 	var hearts = [];
 	var nextTimeout = null;
 	var nextInterval = null;
+	var heartInterval = null;
 
-	function loadQuote(e) {
+	function loadQuote(e, q) {
 		if (e && e.preventDefault)
 			e.preventDefault();
 
-		var next = Math.ceil(Math.random() * quotes);
+		var next = q ? q : Math.ceil(Math.random() * quotes);
 
 		current = $('#q' + next).html();
 
@@ -32,16 +33,11 @@
 			e.stopPropagation();
 		}
 
-		$('.submit .dialog-container').css('display', 'block');
-	}
+		$('.dialog-container').css('display', 'block');
 
-	function share(e) {
-		if (e && e.preventDefault) {
-			e.preventDefault();
-			e.stopPropagation();
-		}
-
-		$('.share-page .dialog-container').css('display', 'block');
+		var dialog = $('.dialog-container .dialog');
+		dialog.css('top', ($(window).height() - dialog.height()) / 2);
+		dialog.css('left', ($(window).width() - dialog.width()) / 2);
 	}
 
 	function floatHearts(e) {
@@ -117,6 +113,13 @@
 		setTimeout(function () { heart.removeClass('beat') }, 400);
 	}
 
+	function stopHeartbeat() {
+		if (heartInterval)
+			clearInterval(heartInterval);
+
+		$('div.heart img').removeClass('beat');
+	}
+
 	$(function () {
 			$('#next').click(loadQuote);
 			$('.next').hover(
@@ -124,10 +127,12 @@
 				stopAnimateNext
 			);
 			$('#submit').click(submit);
+			$('#submit').hover(
+				function () { heartbeat(); heartInterval = setInterval(heartbeat, 1000); },
+				stopHeartbeat
+			);
 			$('.dialog').click(function (e) { e.stopPropagation() });
-			$(document).click(function (e) { $('.dialog-container').css('display', 'none') });
-
-			$('#share-page-link').click(share);
+			$('.dialog-container').click(function (e) { $('.dialog-container').css('display', 'none') });
 
 			$('#form').submit(function (e) {
 				e.preventDefault();
@@ -155,9 +160,10 @@
 				return false;
 			});
 
-			var re = /#q\d+/;
-			if (window.location.hash.match(re) === null)
-				loadQuote()
+			var re = /#q(\d+)/;
+			var match = window.location.hash.match(re);
+
+			loadQuote(null, match[1]);
 
 			$(document).click(floatHearts);
 
@@ -166,7 +172,6 @@
 			window.requestAnimationFrame = raf;
 
 			//requestAnimationFrame(animateHearts);
-			setInterval(heartbeat, 1200);
 			nextTimeout = setTimeout(animateNext, 5000);
 	});
 })();
