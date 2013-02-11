@@ -85,7 +85,7 @@ aside.submit {
 
 article {
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	width: 100%;
 }
 
@@ -105,8 +105,8 @@ article ul {
 	list-style: none;
 
 	font-size: 72px;
-	font-size: 7vmin;
 	/*
+	font-size: 7vmin;
 	font-weight: bold;
 	*/
 }
@@ -275,3 +275,40 @@ div.heart img.beat {
 	-moz-transform: scale(1.1);
 	transform: scale(1.1);
 }
+
+* {
+	-moz-transition: font-size, top 0.1s;
+	-webkit-transition: font-size, top 0.1s;
+	transition: font-size, top 0.1s;
+}
+
+@media screen and (max-width: 1600px) {
+	article ul {
+		font-size: 64px;
+	}
+
+	article {
+		top: 24%;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	article ul {
+		font-size: 48px;
+	}
+
+	article {
+		top: 23%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	article ul {
+		font-size: 36px;
+	}
+
+	article {
+		top: 20%;
+	}
+}
+
