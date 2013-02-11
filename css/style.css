@@ -77,6 +77,9 @@ html {
 
 article, aside.share-quote, aside.submit {
 	text-align: center;
+}
+
+aside.submit {
 	clear: both;
 }
 
@@ -87,7 +90,7 @@ article {
 }
 
 aside.share-quote {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 aside.share-quote .share {
@@ -96,7 +99,7 @@ aside.share-quote .share {
 
 article ul {
 	width: 75%;
-	margin: 0 auto;
+	margin: 20px auto;
 
 	display: block;
 	list-style: none;
@@ -109,9 +112,10 @@ article ul {
 }
 
 article div.next {
-	float: right;
+	position: absolute;
+	right: 0;
 
-	padding: 20px;
+	margin: 20px;
 }
 
 article div.next img {
